@@ -5,13 +5,5 @@ import type { LayoutServerLoad } from './$types'
 
 export const load: LayoutServerLoad = async ({ locals }) => {
   const { user, session } = locals
-
-  console.log(user, session)
-
-  if (browser) {
-    locale.set(window.navigator.language)
-  }
-
-  await waitLocale()
   return { user }
 }
